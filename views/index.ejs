@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Node js - multer image upload</title>
+      <!-- Compiled and minified CSS -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      />
+   </head>
+   <body class="blue">
+      <div class="container">
+         <h1 class="white-text"> Image Upload  </h1>
+
+         <% if (typeof msg != 'undefined') { %>
+            <span> <%= msg %>  </span>
+         <% } %>
+
+         <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="file-field input-field">
+               <div class="btn grey">
+                  <span>File</span>
+                  <input type="file" name="myImage" id="file">
+               </div>
+               <div class="file-path-wrapper">
+                  <input type="text" name="fileName" class="file-path validate">
+               </div>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+         </form>
+         <br>
+
+         <% if (typeof file != 'undefined') { %>
+            <img src=" <%= file %>  " alt="img" class="responsive-img">
+         <% } %>
+         
+      </div>
+      
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "node-multer-fileUpload",
+  "version": "1.0.0",
+  "description": "Image file upload using multer",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
